@@ -138,9 +138,6 @@ Style/SymbolArray:
 Style/InlineComment:
   Enabled: false
 
-Style/EmptyCaseCondition:
-  Enabled: false
-
 Style/NumericPredicate:
   Enabled: false
 
@@ -268,6 +265,9 @@ Style/IpAddresses:
 Style/UnneededCondition:
   Severity: refactor
 
+Style/UnneededSort:
+  Severity: refactor
+
 Style/AccessModifierDeclarations:
   Severity: refactor
 
@@ -356,9 +356,6 @@ Performance/Casecmp:
   Enabled: false
 
 Performance/TimesMap:
-  Severity: refactor
-
-Performance/UnneededSort:
   Severity: refactor
 
 Performance/InefficientHashSearch:
