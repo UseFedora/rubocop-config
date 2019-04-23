@@ -1,0 +1,81 @@
+inherit_from:
+  - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/.rubocop.ruby.yml
+
+# Rails ------------------------------------------------------------------------
+
+Rails/TimeZone:
+  Enabled: false
+
+Rails/Delegate:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/ReadWriteAttribute:
+  Enabled: false
+
+Rails/SaveBang:
+  Severity: refactor
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Rails/SafeNavigation:
+  Enabled: false
+
+Rails/DynamicFindBy:
+  Severity: refactor
+
+Rails/ApplicationRecord:
+  Enabled: true
+
+Rails/RelativeDateConstant:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Severity: refactor
+
+Rails/Date:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments: development,test,production,staging
+
+Rails/OutputSafety:
+  Severity: refactor
+
+Rails/FindBy:
+  Severity: refactor
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Severity: refactor
+  Exclude:
+    - app/controllers/api/v1/**/*.rb
+
+Rails/CreateTableWithTimestamps:
+  Severity: refactor
+  Exclude:
+    - db/**/*_init_schema.rb
+
+Rails/HttpStatus:
+  EnforcedStyle: numeric
+
+Rails/ActiveRecordAliases:
+  Severity: refactor
+
+# TODO enable when upgrading to Rails 5
+Rails/BelongsTo:
+  Enabled: false
+
+Rails/FindEach:
+  Severity: refactor
+
+Rails/LinkToBlank:
+  Severity: refactor
