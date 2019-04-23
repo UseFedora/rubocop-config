@@ -1,0 +1,396 @@
+# All cops are enabled, except for the ones listed below.
+#
+# Documentation:
+# - https://rubocop.readthedocs.io/en/latest/cops_style/#stylestringliterals
+#
+# Find configuration options for the cops in:
+# - https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+#
+# Descriptions are found in:
+# - https://github.com/bbatsov/rubocop/blob/master/config/enabled.yml
+# - https://github.com/bbatsov/rubocop/blob/master/config/disabled.yml
+
+AllCops:
+  EnabledByDefault: true
+  ExtraDetails: true
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.5
+  TargetRailsVersion: 5.1
+  Exclude:
+    - '.git_hooks/**/*'
+    - '**/node_modules/**/*'
+    - '**/vendor/**/*'
+    - 'vendor/**/*'
+    - '**/bin/**/*'
+    - 'app/assets/themes/**/*'
+
+# Metrics ----------------------------------------------------------------------
+
+Metrics/AbcSize:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Metrics/BlockNesting:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/LineLength:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+Metrics/ParameterLists:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+# Bundler ----------------------------------------------------------------------
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Bundler/GemComment:
+  Enabled: false
+
+# Gemspec ----------------------------------------------------------------------
+
+Gemspec/OrderedDependencies:
+  Enabled: false
+
+# Style ------------------------------------------------------------------------
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
+
+Style/WordArray:
+  MinSize: 2
+
+Style/RegexpLiteral:
+  EnforcedStyle: mixed
+
+Style/GlobalVars:
+  AllowedVariables:
+    - $redis
+    - $redis_session_store
+    - $accs
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Copyright:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/Proc:
+  Enabled: false
+
+Style/EmptyCaseCondition:
+  Enabled: false
+
+Style/EmptyElse:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Style/MissingElse:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/InlineComment:
+  Enabled: false
+
+Style/EmptyCaseCondition:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/WhileUntilModifier:
+  Enabled: false
+
+Style/NegatedIf:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/CollectionMethods:
+  Enabled: false
+
+Style/PerlBackrefs:
+  Enabled: false
+
+Style/FormatString:
+  Enabled: false
+
+Style/RaiseArgs:
+  Severity: refactor
+
+Style/PreferredHashMethods:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+Style/ImplicitRuntimeError:
+  Enabled: false
+
+Style/ReturnNil:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/OptionHash:
+  Enabled: false
+
+Style/SymbolProc:
+  Enabled: false
+
+Style/Send:
+  Severity: refactor
+
+Style/TernaryParentheses:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Style/DateTime:
+  Enabled: false
+
+Style/MultipleComparison:
+  Enabled: false
+
+Style/IfInsideElse:
+  Severity: refactor
+
+Style/AutoResourceCleanup:
+  Severity: refactor
+
+Style/RescueStandardError:
+  Severity: refactor
+
+Style/StringHashKeys:
+  Enabled: false
+
+Style/RedundantBegin:
+  Severity: refactor
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+  Severity: refactor
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  Severity: refactor
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  Severity: refactor
+  EnforcedStyleForMultiline: comma
+
+Style/IpAddresses:
+  Severity: refactor
+  Exclude:
+    - spec/**/*_spec.rb
+    - config/boot.rb
+
+Style/UnneededCondition:
+  Severity: refactor
+
+Style/AccessModifierDeclarations:
+  Severity: refactor
+
+Style/RedundantReturn:
+  Severity: refactor
+
+# Naming -----------------------------------------------------------------------
+
+Naming/PredicateName:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Severity: refactor
+
+Naming/UncommunicativeMethodParamName:
+  Severity: refactor
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: optional
+  Severity: refactor
+
+# Layout -----------------------------------------------------------------------
+
+Layout/MultilineAssignmentLayout:
+  EnforcedStyle: same_line
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: aligned
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines_except_namespace
+
+Layout/EmptyLinesAroundModuleBody:
+  EnforcedStyle: empty_lines_except_namespace
+
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+
+Layout/IndentHash:
+  EnforcedStyle: consistent
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundArguments:
+  Enabled: false
+
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: false
+
+Layout/FirstMethodParameterLineBreak:
+  Enabled: false
+
+Layout/LeadingCommentSpace:
+  Enabled: false
+
+Layout/SpaceInsideArrayPercentLiteral:
+  Enabled: false
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: false
+
+Layout/ClassStructure:
+  Severity: refactor
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Layout/SpaceInsideReferenceBrackets:
+  Enabled: false
+
+Layout/AlignHash:
+  Enabled: false
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+
+Layout/RescueEnsureAlignment:
+  Severity: refactor
+
+# Performance ------------------------------------------------------------------
+
+Performance/Casecmp:
+  Enabled: false
+
+Performance/TimesMap:
+  Severity: refactor
+
+Performance/UnneededSort:
+  Severity: refactor
+
+Performance/InefficientHashSearch:
+  Severity: refactor
+
+Performance/RegexpMatch:
+  Severity: refactor
+
+Performance/ChainArrayAllocation:
+  Severity: refactor
+
+Performance/OpenStruct:
+  Severity: refactor
+
+# Lint -------------------------------------------------------------------------
+
+Lint/EmptyWhen:
+  Enabled: false
+
+Lint/UnusedBlockArgument:
+  AllowUnusedKeywordArguments: true
+
+Lint/UnusedMethodArgument:
+  AllowUnusedKeywordArguments: true
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Lint/NumberConversion:
+  Severity: refactor
+  Enabled: false
+
+Lint/DisjunctiveAssignmentInConstructor:
+  Severity: refactor
+  Enabled: false
