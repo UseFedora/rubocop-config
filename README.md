@@ -33,7 +33,14 @@ AllCops:
   TargetRailsVersion: 5.2
 ```
 
-The reason `performance.yml` is separate is because you need a separate gem for it. Add the `rubocop-performance` gem to your Gemfile to get it.
+The reason `performance.yml` is separate is because you need a separate gem for it. Add the `rubocop-performance` gem to your `Gemfile` to get it.
+
+``` ruby
+group :development, :test do
+  gem "rubocop"
+  gem "rubocop-performance"
+end
+```
 
 Also add this to your `.gitignore` file to not commit the cached files.
 
