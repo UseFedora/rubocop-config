@@ -365,7 +365,7 @@ Performance/RegexpMatch:
   Severity: refactor
 
 Performance/ChainArrayAllocation:
-  Severity: refactor
+  Enabled: false
 
 Performance/OpenStruct:
   Severity: refactor
