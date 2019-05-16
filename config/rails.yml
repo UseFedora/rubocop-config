@@ -1,0 +1,35 @@
+Rails/TimeZone:
+  Enabled: false
+
+Rails/Delegate:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/ReadWriteAttribute:
+  Enabled: false
+
+Rails/SaveBang:
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Rails/SafeNavigation:
+  Enabled: false
+
+Rails/RelativeDateConstant:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/Date:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/HttpStatus:
+  EnforcedStyle: numeric

@@ -1,30 +1,3 @@
-# All cops are enabled, except for the ones listed below.
-#
-# Documentation:
-# - https://rubocop.readthedocs.io/en/latest/cops_style/#stylestringliterals
-#
-# Find configuration options for the cops in:
-# - https://github.com/bbatsov/rubocop/blob/master/config/default.yml
-#
-# Descriptions are found in:
-# - https://github.com/bbatsov/rubocop/blob/master/config/enabled.yml
-# - https://github.com/bbatsov/rubocop/blob/master/config/disabled.yml
-
-AllCops:
-  EnabledByDefault: true
-  ExtraDetails: true
-  DisplayCopNames: true
-  DisplayStyleGuide: true
-  TargetRubyVersion: 2.5
-  TargetRailsVersion: 5.1
-  Exclude:
-    - '.git_hooks/**/*'
-    - '**/node_modules/**/*'
-    - '**/vendor/**/*'
-    - 'vendor/**/*'
-    - '**/bin/**/*'
-    - 'app/assets/themes/**/*'
-
 # Metrics ----------------------------------------------------------------------
 
 Metrics/AbcSize:
@@ -81,16 +54,7 @@ Style/WordArray:
 Style/RegexpLiteral:
   EnforcedStyle: mixed
 
-Style/GlobalVars:
-  AllowedVariables:
-    - $redis
-    - $redis_session_store
-    - $accs
-
 Style/MethodCallWithArgsParentheses:
-  Enabled: false
-
-Style/FrozenStringLiteralComment:
   Enabled: false
 
 Style/Copyright:
@@ -162,9 +126,6 @@ Style/PerlBackrefs:
 Style/FormatString:
   Enabled: false
 
-Style/RaiseArgs:
-  Severity: refactor
-
 Style/PreferredHashMethods:
   Enabled: false
 
@@ -194,9 +155,6 @@ Style/OptionHash:
 
 Style/SymbolProc:
   Enabled: false
-
-Style/Send:
-  Severity: refactor
 
 Style/TernaryParentheses:
   Enabled: false
@@ -228,51 +186,19 @@ Style/DateTime:
 Style/MultipleComparison:
   Enabled: false
 
-Style/IfInsideElse:
-  Severity: refactor
-
-Style/AutoResourceCleanup:
-  Severity: refactor
-
-Style/RescueStandardError:
-  Severity: refactor
 
 Style/StringHashKeys:
   Enabled: false
 
-Style/RedundantBegin:
-  Severity: refactor
-
 Style/TrailingCommaInArguments:
   Enabled: false
-  Severity: refactor
   EnforcedStyleForMultiline: comma
 
 Style/TrailingCommaInArrayLiteral:
-  Severity: refactor
   EnforcedStyleForMultiline: comma
 
 Style/TrailingCommaInHashLiteral:
-  Severity: refactor
   EnforcedStyleForMultiline: comma
-
-Style/IpAddresses:
-  Severity: refactor
-  Exclude:
-    - spec/**/*_spec.rb
-    - config/boot.rb
-
-Style/UnneededCondition:
-  Severity: refactor
-
-Style/UnneededSort:
-  Severity: refactor
-
-Style/AccessModifierDeclarations:
-  Severity: refactor
-
-Style/RedundantReturn:
-  Severity: refactor
 
 # Naming -----------------------------------------------------------------------
 
@@ -282,15 +208,20 @@ Naming/PredicateName:
 Naming/VariableNumber:
   Enabled: false
 
-Naming/AccessorMethodName:
-  Severity: refactor
-
-Naming/UncommunicativeMethodParamName:
-  Severity: refactor
-
 Naming/MemoizedInstanceVariableName:
-  EnforcedStyleForLeadingUnderscores: optional
-  Severity: refactor
+  EnforcedStyleForLeadingUnderscores: required
+
+Naming/RescuedExceptionsVariableName:
+  PreferredName: exception
+
+Naming/FileName:
+  Exclude:
+    - tmp/*
+    - bin/*
+    - script/*
+
+Naming/AccessorMethodName:
+  Enabled: false
 
 # Layout -----------------------------------------------------------------------
 
@@ -309,7 +240,7 @@ Layout/EmptyLinesAroundModuleBody:
 Layout/SpaceInLambdaLiteral:
   EnforcedStyle: require_space
 
-Layout/IndentHash:
+Layout/IndentFirstHashElement:
   EnforcedStyle: consistent
 
 Layout/EmptyLinesAroundBlockBody:
@@ -333,9 +264,6 @@ Layout/SpaceInsideArrayPercentLiteral:
 Layout/SpaceInsideArrayLiteralBrackets:
   Enabled: false
 
-Layout/ClassStructure:
-  Severity: refactor
-
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
@@ -347,28 +275,8 @@ Layout/AlignHash:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
 
-Layout/RescueEnsureAlignment:
-  Severity: refactor
-
-# Performance ------------------------------------------------------------------
-
-Performance/Casecmp:
+Layout/MultilineMethodArgumentLineBreaks:
   Enabled: false
-
-Performance/TimesMap:
-  Severity: refactor
-
-Performance/InefficientHashSearch:
-  Severity: refactor
-
-Performance/RegexpMatch:
-  Severity: refactor
-
-Performance/ChainArrayAllocation:
-  Enabled: false
-
-Performance/OpenStruct:
-  Severity: refactor
 
 # Lint -------------------------------------------------------------------------
 
@@ -385,9 +293,7 @@ Lint/AmbiguousBlockAssociation:
   Enabled: false
 
 Lint/NumberConversion:
-  Severity: refactor
   Enabled: false
 
 Lint/DisjunctiveAssignmentInConstructor:
-  Severity: refactor
   Enabled: false
