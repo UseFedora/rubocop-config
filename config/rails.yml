@@ -11,7 +11,7 @@ Rails/ReadWriteAttribute:
   Enabled: false
 
 Rails/SaveBang:
-  Severity: refactor
+  Enabled: false
 
 Rails/HttpPositionalArguments:
   Enabled: false
@@ -19,47 +19,17 @@ Rails/HttpPositionalArguments:
 Rails/SafeNavigation:
   Enabled: false
 
-Rails/DynamicFindBy:
-  Severity: refactor
-
 Rails/RelativeDateConstant:
   Enabled: false
 
 Rails/HasManyOrHasOneDependent:
   Enabled: false
 
-Rails/SkipsModelValidations:
-  Severity: refactor
-
 Rails/Date:
   Enabled: false
-
-Rails/UnknownEnv:
-  Environments: development,test,production,staging
-
-Rails/OutputSafety:
-  Severity: refactor
-
-Rails/FindBy:
-  Severity: refactor
 
 Rails/InverseOf:
   Enabled: false
 
-Rails/LexicallyScopedActionFilter:
-  Severity: refactor
-
-Rails/CreateTableWithTimestamps:
-  Severity: refactor
-
 Rails/HttpStatus:
   EnforcedStyle: numeric
-
-Rails/ActiveRecordAliases:
-  Severity: refactor
-
-Rails/FindEach:
-  Severity: refactor
-
-Rails/LinkToBlank:
-  Severity: refactor
