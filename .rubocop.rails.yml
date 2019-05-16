@@ -1,6 +1,9 @@
 inherit_from:
   - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/.rubocop.ruby.yml
 
+AllCops:
+  TargetRailsVersion: 5.2
+
 # Rails ------------------------------------------------------------------------
 
 Rails/TimeZone:

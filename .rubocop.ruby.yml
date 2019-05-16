@@ -15,8 +15,7 @@ AllCops:
   ExtraDetails: true
   DisplayCopNames: true
   DisplayStyleGuide: true
-  TargetRubyVersion: 2.5
-  TargetRailsVersion: 5.1
+  TargetRubyVersion: 2.6
   Exclude:
     - '.git_hooks/**/*'
     - '**/node_modules/**/*'
@@ -309,7 +308,7 @@ Layout/EmptyLinesAroundModuleBody:
 Layout/SpaceInLambdaLiteral:
   EnforcedStyle: require_space
 
-Layout/IndentHash:
+Layout/IndentFirstHashElement:
   EnforcedStyle: consistent
 
 Layout/EmptyLinesAroundBlockBody:
