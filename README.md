@@ -10,7 +10,9 @@ By default, we enable all the cops and only disable the ones we don't like.
 * [Disabled by default](https://github.com/bbatsov/rubocop/blob/master/config/disabled.yml)
 * [Rubocop Sourcecode](https://github.com/rubocop-hq/rubocop)
 
-### Usage
+## Usage
+
+### `.rubocop.yml`
 
 You inherit from the configurations you need and you can override settings in your own `.rubocop.yml` file.
 
@@ -33,6 +35,28 @@ AllCops:
   TargetRailsVersion: 5.2
 ```
 
+And for non-rails projects:
+
+``` yaml
+require: rubocop-performance
+
+inherit_from:
+  - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/config/ruby.yml
+  - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/config/performance.yml
+
+AllCops:
+  EnabledByDefault: true
+  ExtraDetails: true
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.6
+
+Rails:
+  Enabled: false
+```
+
+### `Gemfile`
+
 The reason `performance.yml` is separate is because you need a separate gem for it. Add the `rubocop-performance` gem to your `Gemfile` to get it.
 
 ``` ruby
@@ -42,12 +66,15 @@ group :development, :test do
 end
 ```
 
-Also add this to your `.gitignore` file to not commit the cached files.
+### `.gitignore`
+
+Also add this to your `.gitignore` file to not commit the cached configuration files.
 
 ```
 .rubocop-*
 ```
 
+
 ### Testing
 
-To test the config, just run `rubocop`.
+To test the config, just run `bundle exec rubocop`.
