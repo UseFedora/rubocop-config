@@ -1,0 +1,15 @@
+require: rubocop-performance
+
+# locally for testing purposes
+inherit_from:
+  - config/ruby.yml
+  - config/performance.yml
+  - config/rails.yml
+
+AllCops:
+  EnabledByDefault: true
+  ExtraDetails: true
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.6
+  TargetRailsVersion: 5.2

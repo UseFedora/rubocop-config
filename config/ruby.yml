@@ -332,26 +332,6 @@ Layout/AlignHash:
 Layout/RescueEnsureAlignment:
   Severity: refactor
 
-# Performance ------------------------------------------------------------------
-
-Performance/Casecmp:
-  Enabled: false
-
-Performance/TimesMap:
-  Severity: refactor
-
-Performance/InefficientHashSearch:
-  Severity: refactor
-
-Performance/RegexpMatch:
-  Severity: refactor
-
-Performance/ChainArrayAllocation:
-  Enabled: false
-
-Performance/OpenStruct:
-  Severity: refactor
-
 # Lint -------------------------------------------------------------------------
 
 Lint/EmptyWhen:
