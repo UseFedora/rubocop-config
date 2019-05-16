@@ -1,11 +1,3 @@
-inherit_from:
-  - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/.rubocop.ruby.yml
-
-AllCops:
-  TargetRailsVersion: 5.2
-
-# Rails ------------------------------------------------------------------------
-
 Rails/TimeZone:
   Enabled: false
 
@@ -29,9 +21,6 @@ Rails/SafeNavigation:
 
 Rails/DynamicFindBy:
   Severity: refactor
-
-Rails/ApplicationRecord:
-  Enabled: true
 
 Rails/RelativeDateConstant:
   Enabled: false
@@ -59,23 +48,15 @@ Rails/InverseOf:
 
 Rails/LexicallyScopedActionFilter:
   Severity: refactor
-  Exclude:
-    - app/controllers/api/v1/**/*.rb
 
 Rails/CreateTableWithTimestamps:
   Severity: refactor
-  Exclude:
-    - db/**/*_init_schema.rb
 
 Rails/HttpStatus:
   EnforcedStyle: numeric
 
 Rails/ActiveRecordAliases:
   Severity: refactor
-
-# TODO enable when upgrading to Rails 5
-Rails/BelongsTo:
-  Enabled: false
 
 Rails/FindEach:
   Severity: refactor

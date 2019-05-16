@@ -10,20 +10,6 @@
 # - https://github.com/bbatsov/rubocop/blob/master/config/enabled.yml
 # - https://github.com/bbatsov/rubocop/blob/master/config/disabled.yml
 
-AllCops:
-  EnabledByDefault: true
-  ExtraDetails: true
-  DisplayCopNames: true
-  DisplayStyleGuide: true
-  TargetRubyVersion: 2.6
-  Exclude:
-    - '.git_hooks/**/*'
-    - '**/node_modules/**/*'
-    - '**/vendor/**/*'
-    - 'vendor/**/*'
-    - '**/bin/**/*'
-    - 'app/assets/themes/**/*'
-
 # Metrics ----------------------------------------------------------------------
 
 Metrics/AbcSize:
@@ -81,16 +67,13 @@ Style/RegexpLiteral:
   EnforcedStyle: mixed
 
 Style/GlobalVars:
-  AllowedVariables:
-    - $redis
-    - $redis_session_store
-    - $accs
+  Enabled: true
 
 Style/MethodCallWithArgsParentheses:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Enabled: true
 
 Style/Copyright:
   Enabled: false
