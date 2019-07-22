@@ -50,9 +50,6 @@ AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
   TargetRubyVersion: 2.6
-
-Rails:
-  Enabled: false
 ```
 
 ### `Gemfile`
