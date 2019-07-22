@@ -58,8 +58,8 @@ The reason `performance.yml` is separate is because you need a separate gem for 
 
 ``` ruby
 group :development, :test do
-  gem "rubocop"
-  gem "rubocop-performance"
+  # gem "rubocop", require: false # disabled because rubocop-performance includes it
+  gem "rubocop-performance", require: false
 end
 ```
 
