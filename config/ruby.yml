@@ -186,6 +186,8 @@ Style/DateTime:
 Style/MultipleComparison:
   Enabled: false
 
+Style/ConstantVisibility:
+  Enabled: false
 
 Style/StringHashKeys:
   Enabled: false

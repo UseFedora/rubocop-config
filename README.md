@@ -1,6 +1,7 @@
 # rubocop-config
 
-Teachable's Rubocop configuration, it's in a public repository so we can easily inherit from these settings.
+Teachable's Rubocop configuration, it's in a public repository so we can easily
+inherit from these settings.
 
 By default, we enable all the cops and only disable the ones we don't like.
 
@@ -14,12 +15,15 @@ By default, we enable all the cops and only disable the ones we don't like.
 
 ### `.rubocop.yml`
 
-You inherit from the configurations you need and you can override settings in your own `.rubocop.yml` file.
+You inherit from the configurations you need and you can override settings in
+your own `.rubocop.yml` file.
 
 Here's a common place to start for a Rails project:
 
 ``` yaml
-require: rubocop-performance
+require:
+  - rubocop-performance
+  - rubocop-rails
 
 inherit_from:
   - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/config/ruby.yml
@@ -38,7 +42,8 @@ AllCops:
 And for non-rails projects:
 
 ``` yaml
-require: rubocop-performance
+require:
+  - rubocop-performance
 
 inherit_from:
   - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/config/ruby.yml
@@ -54,14 +59,20 @@ AllCops:
 
 ### `Gemfile`
 
-The reason `performance.yml` is separate is because you need a separate gem for it. Add the `rubocop-performance` gem to your `Gemfile` to get it.
+The reason `performance.yml` is separate is because you need a separate gem for
+it. Add the `rubocop-performance` gem to your `Gemfile` to get it.
 
 ``` ruby
 group :development, :test do
-  # gem "rubocop", require: false # disabled because rubocop-performance includes it
   gem "rubocop-performance", require: false
+  gem "rubocop-rails", require: false
 end
 ```
+
+We don't want to require it in normal use, just when running the rubocop command.
+
+And it should go without saying that `rubocop-rails` should only be added when
+you are in a Rails project.
 
 ### `.gitignore`
 
