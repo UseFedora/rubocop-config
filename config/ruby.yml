@@ -1,3 +1,6 @@
+Migration/DepartmentName:
+  Enabled: false
+
 # Metrics ----------------------------------------------------------------------
 
 Metrics/AbcSize:
