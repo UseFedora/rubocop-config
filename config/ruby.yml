@@ -245,7 +245,7 @@ Layout/EmptyLinesAroundModuleBody:
 Layout/SpaceInLambdaLiteral:
   EnforcedStyle: require_space
 
-Layout/IndentFirstHashElement:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 
 Layout/EmptyLinesAroundBlockBody:
@@ -275,7 +275,7 @@ Layout/EmptyLineAfterGuardClause:
 Layout/SpaceInsideReferenceBrackets:
   Enabled: false
 
-Layout/AlignHash:
+Layout/HashAlignment:
   Enabled: false
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
