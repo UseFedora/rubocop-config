@@ -205,6 +205,9 @@ Style/TrailingCommaInArrayLiteral:
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 
+Style/FloatDivision:
+  Enabled: false
+
 # Naming -----------------------------------------------------------------------
 
 Naming/PredicateName:
