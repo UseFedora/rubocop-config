@@ -33,3 +33,9 @@ Rails/InverseOf:
 
 Rails/HttpStatus:
   EnforcedStyle: numeric
+
+Rails/RakeEnvironment:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
