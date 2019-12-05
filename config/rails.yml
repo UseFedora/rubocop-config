@@ -39,3 +39,6 @@ Rails/RakeEnvironment:
 
 Rails/FilePath:
   Enabled: false
+
+Rails/BulkChangeTable:
+  Enabled: false
