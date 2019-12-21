@@ -13,8 +13,6 @@ Metrics/ClassLength:
   Enabled: false
 Metrics/CyclomaticComplexity:
   Enabled: false
-Metrics/LineLength:
-  Enabled: false
 Metrics/MethodLength:
   Enabled: false
 Metrics/ModuleLength:
@@ -285,6 +283,10 @@ Layout/HashAlignment:
 
 Layout/MultilineMethodArgumentLineBreaks:
   Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+
 
 # Lint -------------------------------------------------------------------------
 
