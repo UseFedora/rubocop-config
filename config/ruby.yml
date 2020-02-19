@@ -46,9 +46,6 @@ Style/EmptyMethod:
 Style/Alias:
   EnforcedStyle: prefer_alias_method
 
-Style/BracesAroundHashParameters:
-  EnforcedStyle: context_dependent
-
 Style/WordArray:
   MinSize: 2
 
