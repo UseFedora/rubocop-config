@@ -203,6 +203,11 @@ Style/TrailingCommaInHashLiteral:
 Style/FloatDivision:
   Enabled: false
 
+Style/IpAddresses:
+  Exclude:
+    - "spec/**/*"
+    - "Gemfile"
+
 # Naming -----------------------------------------------------------------------
 
 Naming/PredicateName:
