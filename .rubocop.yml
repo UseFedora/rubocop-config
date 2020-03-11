@@ -1,12 +1,14 @@
 require:
   - rubocop-performance
   - rubocop-rails
+  - rubocop-rspec
 
 # locally for testing purposes
 inherit_from:
   - config/ruby.yml
   - config/performance.yml
   - config/rails.yml
+  - config/rspec.yml
 
 AllCops:
   EnabledByDefault: true

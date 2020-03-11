@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euxo pipefail
+
+aws s3 sync --profile production --cache-control max-age=3600,public config/ s3://config.teachablecdn.com/rubocop
