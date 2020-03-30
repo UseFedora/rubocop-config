@@ -24,11 +24,13 @@ Here's a common place to start for a Rails project:
 require:
   - rubocop-performance
   - rubocop-rails
+  - rubocop-rspec
 
 inherit_from:
-  - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/config/ruby.yml
-  - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/config/performance.yml
-  - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/config/rails.yml
+  - https://config.teachablecdn.com/rubocop/ruby.yml
+  - https://config.teachablecdn.com/rubocop/performance.yml
+  - https://config.teachablecdn.com/rubocop/rails.yml
+  - https://config.teachablecdn.com/rubocop/rspec.yml
 
 AllCops:
   EnabledByDefault: true
@@ -44,10 +46,12 @@ And for non-rails projects:
 ``` yaml
 require:
   - rubocop-performance
+  - rubocop-rspec
 
 inherit_from:
-  - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/config/ruby.yml
-  - https://raw.githubusercontent.com/UseFedora/rubocop-config/master/config/performance.yml
+  - https://config.teachablecdn.com/rubocop/ruby.yml
+  - https://config.teachablecdn.com/rubocop/performance.yml
+  - https://config.teachablecdn.com/rubocop/rspec.yml
 
 AllCops:
   EnabledByDefault: true
@@ -65,14 +69,15 @@ it. Add the `rubocop-performance` gem to your `Gemfile` to get it.
 ``` ruby
 group :development, :test do
   gem "rubocop-performance", require: false
-  gem "rubocop-rails", require: false
+  gem "rubocop-rails",       require: false
+  gem "rubocop-rspec",       require: false
 end
 ```
 
 We don't want to require it in normal use, just when running the rubocop command.
 
 And it should go without saying that `rubocop-rails` should only be added when
-you are in a Rails project.
+you are in a Rails project. The same goes for `rubocop-rspec`.
 
 ### `.gitignore`
 
