@@ -1,8 +1,8 @@
 RSpec/MultipleExpectations:
-  Max: 16
+  Enabled: false
 
 RSpec/ExampleLength:
-  Max: 50
+  Enabled: false
 
 RSpec/MessageExpectation:
   Enabled: false
