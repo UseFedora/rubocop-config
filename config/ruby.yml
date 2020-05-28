@@ -203,10 +203,14 @@ Style/TrailingCommaInHashLiteral:
 Style/FloatDivision:
   Enabled: false
 
+Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: false
+
 Style/IpAddresses:
   Exclude:
     - "spec/**/*"
     - "Gemfile"
+    - "config/initializers/*"
 
 # Naming -----------------------------------------------------------------------
 
