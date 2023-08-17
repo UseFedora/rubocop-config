@@ -6,13 +6,13 @@ metadata:
   description: ''
   tags: []
   annotations:
-    github.com/project-slug: Hotmart-Org/rubocop-config
+    github.com/project-slug: UseFedora/rubocop-config
     backstage.io/techdocs-ref: dir:.
   links: []
 spec:
   type: service
   lifecycle: production
-  owner: Platform Enablement - DevOps Experience
+  owner: Platform Enablement
   heimdall:
     reportable: false
     pci: false
