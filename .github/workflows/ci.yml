@@ -1,0 +1,25 @@
+name: Run CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+env:
+  GH_PACKAGE_USERNAME: ${{ secrets.GH_PACKAGE_USERNAME }}
+  GH_PACKAGE_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+jobs:
+  ci:
+    runs-on: [ ubuntu-latest ]
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7' # Not needed with a .ruby-version file
+      - run: |
+          bundle install
