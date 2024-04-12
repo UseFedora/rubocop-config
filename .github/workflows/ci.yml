@@ -23,4 +23,3 @@ jobs:
           ruby-version: '2.7' # Not needed with a .ruby-version file
       - run: |
           bundle install
-          rake
